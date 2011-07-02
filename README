@@ -1,0 +1,7 @@
+This is a clean Spring MVC application skeleton with Hibernate persistence.
+
+1. Edit src/main/webapp/WEB-INF/spring/persistence-config.xml to reflect your environment.
+2. mvn clean install
+
+Done.
+

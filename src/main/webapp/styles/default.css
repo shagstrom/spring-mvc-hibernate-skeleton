@@ -1,0 +1,21 @@
+body {font-family: sans-serif;}
+
+table {border-collapse: collapse;width:100%;}
+th {border:1px solid #ddd;background:#eee;padding:0.25em;text-align:left;}
+td {border:1px solid #ddd;}
+td>span.error {display:block;font-size:75%;}
+td input {border:0;}
+td input[disabled] {color:#555;background: transparent;}
+td input[type="text"] {width:100%;}
+
+form {font-size:100%;}
+fieldset {font-size:100%;}
+input, select, textarea {font-size:100%;font-family:sans-serif;border:2px solid #aaa;padding:0.25em;}
+input[type="submit"] {border:2px solid #888;padding:0.25em}
+.error {color:red;}
+
+div.field {float:left;padding:0 1em 1em 0;}
+div.field.vertical {clear:left;}
+div.block {float:left;}
+div.block.vertical {clear:left;}
+fieldset.fieldcontainer {padding:1em 0 0 1em;}
