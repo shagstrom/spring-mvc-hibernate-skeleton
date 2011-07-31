@@ -13,8 +13,7 @@ import com.dreamchain.skeleton.service.UserService;
 @Service
 public class UserServiceImpl implements UserService {
 	
-	@Autowired(required=true)
-	private UserDao userDao;
+	@Autowired UserDao userDao;
 	
 	@Transactional(readOnly=true)
 	public User get(Long id) {

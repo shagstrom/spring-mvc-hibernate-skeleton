@@ -13,7 +13,7 @@ import junit.framework.Assert;
 import org.junit.Test;
 
 import com.dreamchain.skeleton.model.User;
-import com.dreamchain.skeleton.web.UsersCommand;
+import com.dreamchain.skeleton.web.UserGrid;
 
 public class UsersCommandTest {
 	
@@ -32,10 +32,10 @@ public class UsersCommandTest {
 		users.get(1).setEmail("name2@domain.net");
 		users.get(1).setAddress("address2");
 
-		UsersCommand usersCommand = new UsersCommand(users);
+		UserGrid usersCommand = new UserGrid(users);
 		
 		Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
-		Set<ConstraintViolation<UsersCommand>> violations = validator.validate(usersCommand); 
+		Set<ConstraintViolation<UserGrid>> violations = validator.validate(usersCommand); 
 		Assert.assertTrue(violations.isEmpty());
 	
 	}
@@ -50,12 +50,12 @@ public class UsersCommandTest {
 		users.get(0).setEmail("Invalid Email!!!!");
 		users.get(0).setAddress("address1");
 
-		UsersCommand usersCommand = new UsersCommand(users);
+		UserGrid usersCommand = new UserGrid(users);
 		
 		Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
-		Set<ConstraintViolation<UsersCommand>> violations = validator.validate(usersCommand);
+		Set<ConstraintViolation<UserGrid>> violations = validator.validate(usersCommand);
 		Assert.assertFalse(violations.isEmpty());
-		for (ConstraintViolation<UsersCommand> violation : violations) {
+		for (ConstraintViolation<UserGrid> violation : violations) {
 			Assert.assertEquals("not a well-formed email address", violation.getMessage());
 		}
 	

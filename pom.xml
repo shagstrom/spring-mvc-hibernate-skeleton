@@ -20,6 +20,10 @@
 			<id>jboss</id>
 			<url>http://repository.jboss.com/maven2</url>
 		</repository>
+		<repository>
+			<id>springsource-milestone</id>
+			<url>http://s3browse.springsource.com/browse/maven.springframework.org/milestone</url>
+		</repository>
 	</repositories>
 
 	<dependencies>
@@ -74,6 +78,11 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
 			<version>3.0.5.RELEASE</version>
 		</dependency>
 

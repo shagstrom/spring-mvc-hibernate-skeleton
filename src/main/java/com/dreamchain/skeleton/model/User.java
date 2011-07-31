@@ -2,7 +2,6 @@ package com.dreamchain.skeleton.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -22,16 +21,13 @@ public class User implements Serializable {
 	@GeneratedValue
 	private Long id;
 
-	@Column
 	@NotEmpty
 	private String name;
 
-	@Column
 	@Email
 	@NotEmpty
 	private String email;
 
-	@Column
 	@NotNull
 	private String address;
 	

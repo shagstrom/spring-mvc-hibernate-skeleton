@@ -12,11 +12,15 @@ import com.dreamchain.skeleton.model.User;
 @Repository
 public class UserDaoImpl implements UserDao {
 
+	@Autowired
 	private SessionFactory sessionFactory;
 
 	public User get(Long id) {
 		return (User) sessionFactory.getCurrentSession()
-			.createQuery("from User user where user.id = :id")
+			.createQuery("" +
+					"from User u " +
+					"where u.id = :id " +
+					"order by u.id")
 			.setLong("id", id).uniqueResult();
 	}
 
@@ -34,9 +38,4 @@ public class UserDaoImpl implements UserDao {
 		
 	}
 	
-	@Autowired
-	public void setSessionFactory(SessionFactory sessionFactory) {
-		this.sessionFactory = sessionFactory;
-	}
-
 }

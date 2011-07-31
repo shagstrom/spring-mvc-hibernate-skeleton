@@ -22,16 +22,17 @@ public class UserController {
 	
 	private Logger logger = LoggerFactory.getLogger(getClass());
 
-	@Autowired private UserService userService;
+	@Autowired
+	UserService userService;
 
 	@ModelAttribute("userCommand")
 	public UserCommand populateUserCommand() {
 		return new UserCommand();
 	}
 	
-	@ModelAttribute("usersCommand")
-	public UsersCommand populateUsersCommand() {
-		return new UsersCommand(userService.findAll());
+	@ModelAttribute("userGrid")
+	public UserGrid populateUserGrid() {
+		return new UserGrid(userService.findAll());
 	}
 	
 	@RequestMapping(method = RequestMethod.GET)
@@ -49,11 +50,11 @@ public class UserController {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST, params="_method=put")
-	public String put(Model model, @Valid UsersCommand usersCommand, BindingResult result) {
+	public String put(Model model, @Valid UserGrid userGrid, BindingResult result) {
 		if (result.hasErrors()) {
 			return URL;
 		}
-		userService.saveAll(usersCommand.getSelectedUsers());
+		userService.saveAll(userGrid.getSelectedUsers());
 		return "redirect:" + URL;
 	}
 	
