@@ -27,10 +27,11 @@ var RowSelector = (function(){
 	function toggleAll(checkbox) {
 		var checked = checkbox.checked;
 		checkbox.up('table').select('tbody :input').each(function(input){ 
-			if (input.hasClassName('rowSelector'))
+			if (input.hasClassName('rowSelector')) {
 				input.checked = checked;
-			else
+			} else {
 				input.disabled = !checked;
+			}
 		});
 	}
 	

@@ -1,22 +1,35 @@
 package com.dreamchain.skeleton.web;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.validation.Valid;
 
+import org.apache.commons.collections.Factory;
+import org.apache.commons.collections.map.LazyMap;
+
 import com.dreamchain.skeleton.model.User;
 
 public class UserGrid {
 	
 	@Valid
-	private Map<Long, UserCommand> userMap = new LinkedHashMap<Long, UserCommand>();
+	private Map<Long, UserCommand> userMap;
 	
-	public UserGrid() {}
+	@SuppressWarnings("unchecked") // Apache Commons don't do generics
+	public UserGrid() {
+		Factory factory = new Factory() {
+			public Object create() {
+				return new UserCommand();
+			}
+		};
+		userMap = LazyMap.decorate(new HashMap<Long, UserCommand>(), factory);
+	}
 	
 	public UserGrid(List<User> users) {
+		userMap = new LinkedHashMap<Long, UserCommand>();
 		for (User user : users)
 			userMap.put(user.getId(), new UserCommand(user));
 	}

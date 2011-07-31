@@ -49,7 +49,12 @@
 					<c:forEach var="userEntry" items="${userGrid.userMap}" varStatus="row">
 						<tr>
 							<td>
-								<form:checkbox cssClass="rowSelector" path="userMap[${userEntry.key}].selected" />
+								<c:if test="${userMap[userEntry.key].selected}">
+									<input type="checkbox" checked="checked" class="rowSelector" />
+								</c:if>
+								<c:if test="${!userMap[userEntry.key].selected}">
+									<input type="checkbox" class="rowSelector" />
+								</c:if>
 							</td>
 							<td>
 								<form:errors path="userMap[${userEntry.key}].name" cssClass="error" />

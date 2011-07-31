@@ -2,8 +2,6 @@ package com.dreamchain.skeleton.web;
 
 import javax.validation.Valid;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,8 +18,6 @@ public class UserController {
 
 	static final String URL = "/user";
 	
-	private Logger logger = LoggerFactory.getLogger(getClass());
-
 	@Autowired
 	UserService userService;
 
@@ -30,31 +26,28 @@ public class UserController {
 		return new UserCommand();
 	}
 	
-	@ModelAttribute("userGrid")
-	public UserGrid populateUserGrid() {
-		return new UserGrid(userService.findAll());
-	}
-	
 	@RequestMapping(method = RequestMethod.GET)
 	public void get(Model model) {
+		model.addAttribute("userGrid", userService.findAll());
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
 	public String post(Model model, @Valid UserCommand userCommand, BindingResult result) {
 		if (result.hasErrors()) {
-			logger.info("Validation failed");
+			model.addAttribute("userGrid", userService.findAll());
 			return URL;
 		}
-		userService.save(userCommand.toUser());
+		userService.save(userCommand);
 		return "redirect:" + URL;
 	}
 	
 	@RequestMapping(method = RequestMethod.POST, params="_method=put")
 	public String put(Model model, @Valid UserGrid userGrid, BindingResult result) {
 		if (result.hasErrors()) {
+			userService.updateWithAll(userGrid);
 			return URL;
 		}
-		userService.saveAll(userGrid.getSelectedUsers());
+		userService.saveAll(userGrid);
 		return "redirect:" + URL;
 	}
 	

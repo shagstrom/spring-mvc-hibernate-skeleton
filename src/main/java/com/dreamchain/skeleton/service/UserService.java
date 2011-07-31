@@ -1,15 +1,21 @@
 package com.dreamchain.skeleton.service;
 
-import java.util.List;
-
 import com.dreamchain.skeleton.model.User;
+import com.dreamchain.skeleton.web.UserCommand;
+import com.dreamchain.skeleton.web.UserGrid;
 
 public interface UserService {
 	
 	User get(Long id);
-	void save(User user);
+	
+	void save(UserCommand userCommand);
+	
 	void delete(User user);
-	List<User> findAll();
-	void saveAll(List<User> users);
+	
+	UserGrid findAll();
+	
+	void saveAll(UserGrid userGrid);
+
+	void updateWithAll(UserGrid userGrid);
 	
 }
