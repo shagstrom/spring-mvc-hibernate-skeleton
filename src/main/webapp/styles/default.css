@@ -1,21 +1,102 @@
-body {font-family: sans-serif;}
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 1em;
+}
 
-table {border-collapse: collapse;width:100%;}
-th {border:1px solid #ddd;background:#eee;padding:0.25em;text-align:left;}
-td {border:1px solid #ddd;}
-td>span.error {display:block;font-size:75%;}
-td input {border:0;}
-td input[disabled] {color:#555;background: transparent;}
-td input[type="text"] {width:100%;}
+div.legacy-browser {
+	margin: -1em;
+	background: orange;
+	line-height: 2em;
+	text-align: center;
+}
 
-form {font-size:100%;}
-fieldset {font-size:100%;}
-input, select, textarea {font-size:100%;font-family:sans-serif;border:2px solid #aaa;padding:0.25em;}
-input[type="submit"] {border:2px solid #888;padding:0.25em}
-.error {color:red;}
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
 
-div.field {float:left;padding:0 1em 1em 0;}
-div.field.vertical {clear:left;}
-div.block {float:left;}
-div.block.vertical {clear:left;}
-fieldset.fieldcontainer {padding:1em 0 0 1em;}
+th {
+	border: 1px solid #ddd;
+	background: #eee;
+	padding: 0.25em;
+	text-align: left;
+}
+
+td {
+	border: 1px solid #ddd;
+}
+
+td>span.errors {
+	display: block;
+	font-size: 75%;
+}
+
+td input {
+	border: 0;
+}
+
+td input[disabled] {
+	color: #555;
+	background: transparent;
+}
+
+td input[type="text"] {
+	width: 100%;
+}
+
+form {
+	font-size: 100%;
+}
+
+fieldset {
+	font-size: 100%;
+}
+
+input, select, textarea {
+	font-size: 100%;
+	font-family: sans-serif;
+	border: 2px solid #aaa;
+	padding: 0.25em;
+}
+
+input[type="submit"] {
+	border: 2px solid #888;
+	border-radius: 5px;
+	background: #ddd;
+	text-shadow: 1px 1px #f5f5f5;
+	padding: 0.25em 0.5em;
+}
+
+input.disablable-hidden {
+	display: none;
+}
+
+.errors {
+	color: red;
+}
+
+fieldset.fieldcontainer {
+	padding: 1em 0 0 1em;
+}
+
+div.block {
+	float: left;
+}
+
+div.block.vertical {
+	clear: left;
+}
+
+div.field {
+	float: left;
+	padding: 0 1em 1em 0;
+}
+
+div.field.vertical {
+	clear: left;
+}
+
+div.field label {
+	display: block;
+}

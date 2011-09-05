@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService {
 
 	@Transactional
 	public void saveAll(UserGrid userGrid) {
-		for (User user : userGrid.getSelectedUsers())
+		for (User user : userGrid.getUsers())
 			userDao.save(user);
 	}
 	

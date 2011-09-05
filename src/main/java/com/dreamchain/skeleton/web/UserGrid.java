@@ -34,11 +34,11 @@ public class UserGrid {
 			userMap.put(user.getId(), new UserCommand(user));
 	}
 	
-	public List<User> getSelectedUsers() {
+	public List<User> getUsers() {
 		List<User> users = new ArrayList<User>();
-		for (UserCommand userCommand : userMap.values())
-			if (userCommand.getSelected())
-				users.add(userCommand.toUser());
+		for (UserCommand userCommand : userMap.values()) {
+			users.add(userCommand.toUser());
+		}
 		return users;
 	}
 
