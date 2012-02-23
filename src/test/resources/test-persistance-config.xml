@@ -16,11 +16,7 @@
 	<bean id="myDataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="org.postgresql.Driver" />
-		<!--
-			N.B., I'm using EnterpriseDB. When using standart Postgres the port is
-			probably 5432 not 5444.
-		-->
-		<property name="url" value="jdbc:postgresql://localhost:5444/skeleton-test" />
+		<property name="url" value="jdbc:postgresql://localhost:5432/skeleton-test" />
 		<property name="username" value="skeleton" />
 		<property name="password" value="password" />
 	</bean>

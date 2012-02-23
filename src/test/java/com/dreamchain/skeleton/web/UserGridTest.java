@@ -15,7 +15,7 @@ import org.junit.Test;
 import com.dreamchain.skeleton.model.User;
 import com.dreamchain.skeleton.web.UserGrid;
 
-public class UsersCommandTest {
+public class UserGridTest {
 	
 	@Test
 	public void two_valid_users_should_not_have_violations() {
@@ -32,10 +32,10 @@ public class UsersCommandTest {
 		users.get(1).setEmail("name2@domain.net");
 		users.get(1).setAddress("address2");
 
-		UserGrid usersCommand = new UserGrid(users);
+		UserGrid userGrid = new UserGrid(users);
 		
 		Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
-		Set<ConstraintViolation<UserGrid>> violations = validator.validate(usersCommand); 
+		Set<ConstraintViolation<UserGrid>> violations = validator.validate(userGrid); 
 		Assert.assertTrue(violations.isEmpty());
 	
 	}

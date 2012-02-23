@@ -4,7 +4,6 @@ import static junit.framework.Assert.assertTrue;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
