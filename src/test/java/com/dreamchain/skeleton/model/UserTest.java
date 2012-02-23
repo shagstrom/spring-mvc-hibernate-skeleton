@@ -18,7 +18,8 @@ public class UserTest {
 	public void assert_that_certain_fields_cant_be_null_or_blank() {
 		User user = new User();
 		Map<String, ConstraintViolation<User>> violationsMap = validate(user);
-		assertTrue(violationsMap.get("name").getMessageTemplate().contains("NotEmpty"));
+		assertTrue(violationsMap.get("firstName").getMessageTemplate().contains("NotEmpty"));
+		assertTrue(violationsMap.get("lastName").getMessageTemplate().contains("NotEmpty"));
 		assertTrue(violationsMap.get("email").getMessageTemplate().contains("NotEmpty"));
 		assertTrue(violationsMap.get("address").getMessageTemplate().contains("NotNull"));
 	}

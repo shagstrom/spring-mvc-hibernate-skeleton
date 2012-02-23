@@ -20,10 +20,6 @@
 			<id>jboss</id>
 			<url>http://repository.jboss.com/maven2</url>
 		</repository>
-		<repository>
-			<id>springsource-milestone</id>
-			<url>http://s3browse.springsource.com/browse/maven.springframework.org/milestone</url>
-		</repository>
 	</repositories>
 
 	<dependencies>
@@ -32,7 +28,7 @@
 		<dependency>
 			<groupId>postgresql</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>8.3-606.jdbc3</version>
+			<version>8.4-702.jdbc3</version>
 		</dependency>
 
 		<!-- Hibernate -->
@@ -132,8 +128,8 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
+					<source>1.6</source>
+					<target>1.6</target>
 				</configuration>
 			</plugin>
 			<plugin>

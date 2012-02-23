@@ -23,12 +23,14 @@ public class UserGridTest {
 		List<User> users = new ArrayList<User>();
 
 		users.add(new User());
-		users.get(0).setName("name1");
+		users.get(0).setFirstName("name1");
+		users.get(0).setLastName("lastname1");
 		users.get(0).setEmail("name1@domain.net");
 		users.get(0).setAddress("address1");
 
 		users.add(new User());
-		users.get(1).setName("name2");
+		users.get(1).setFirstName("name2");
+		users.get(1).setLastName("lastname2");
 		users.get(1).setEmail("name2@domain.net");
 		users.get(1).setAddress("address2");
 
@@ -46,7 +48,8 @@ public class UserGridTest {
 		List<User> users = new ArrayList<User>();
 
 		users.add(new User());
-		users.get(0).setName("name1");
+		users.get(0).setFirstName("name1");
+		users.get(0).setLastName("lastname1");
 		users.get(0).setEmail("Invalid Email!!!!");
 		users.get(0).setAddress("address1");
 

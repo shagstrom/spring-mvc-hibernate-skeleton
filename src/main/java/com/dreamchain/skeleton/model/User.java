@@ -32,8 +32,6 @@ public class User implements Serializable {
 	private String address;
 	
 
-	/* Getters and setters below this row */
-
 	public Long getId() {
 		return id;
 	}
