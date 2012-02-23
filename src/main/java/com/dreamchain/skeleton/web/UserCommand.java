@@ -18,7 +18,12 @@ public class UserCommand extends User {
 	}
 
 	public User toUser() {
-		return (User) this;
+		User user = new User();
+		user.setId(getId());
+		user.setName(getName());
+		user.setEmail(getEmail());
+		user.setAddress(getAddress());
+		return user;
 	}
 	
 	public Boolean getSelected() {

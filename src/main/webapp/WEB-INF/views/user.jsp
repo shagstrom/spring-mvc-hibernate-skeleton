@@ -24,17 +24,11 @@
 
 				<div class="block">
 					<div class="field">
-						<form:label for="firstName" path="firstName">First Name:</form:label>
-						<form:errors path="firstName" cssClass="errors" />
-						<form:input path="firstName" />
+						<form:label for="name" path="name">Name:</form:label>
+						<form:errors path="name" cssClass="errors" />
+						<form:input path="name" />
 					</div>
 	
-					<div class="field">
-						<form:label for="lastName" path="lastName">Last Name:</form:label>
-						<form:errors path="lastName" cssClass="errors" />
-						<form:input path="lastName" />
-					</div>
-
 					<div class="field vertical">
 						<form:label for="email" path="email">Email:</form:label>
 						<form:errors path="email" cssClass="errors" />
@@ -56,7 +50,7 @@
 		</form:form>
 		<form:form action="" method="put" modelAttribute="userGrid">
 			<table>
-				<thead><tr><th><input type="checkbox" class="toggleAll" /></th><th>First Name</th><th>Last Name</th><th>Email</th><th>Address</th></tr></thead>
+				<thead><tr><th><input type="checkbox" class="toggleAll" /></th><th>Name</th><th>Email</th><th>Address</th></tr></thead>
 				<tbody>
 					<c:forEach var="userEntry" items="${userGrid.userMap}" varStatus="row">
 						<tr>
@@ -70,12 +64,8 @@
 								</c:if>
 							</td>
 							<td>
-								<form:errors path="userMap[${userEntry.key}].firstName" cssClass="errors" />
-								<form:input disabled="${!userEntry.value.selected}" path="userMap[${userEntry.key}].firstName" />
-							</td>
-							<td>
-								<form:errors path="userMap[${userEntry.key}].lastName" cssClass="errors" />
-								<form:input disabled="${!userEntry.value.selected}" path="userMap[${userEntry.key}].lastName" />
+								<form:errors path="userMap[${userEntry.key}].name" cssClass="errors" />
+								<form:input disabled="${!userEntry.value.selected}" path="userMap[${userEntry.key}].name" />
 							</td>
 							<td>
 								<form:errors path="userMap[${userEntry.key}].email" cssClass="errors" />

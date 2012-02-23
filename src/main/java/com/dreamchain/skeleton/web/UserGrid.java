@@ -42,9 +42,6 @@ public class UserGrid {
 		return users;
 	}
 
-	
-	/* Annoying Getters and Setters start here */
-	
 	public Map<Long, UserCommand> getUserMap() {
 		return userMap;
 	}

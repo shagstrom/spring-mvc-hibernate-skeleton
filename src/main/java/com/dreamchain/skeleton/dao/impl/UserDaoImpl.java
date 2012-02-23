@@ -17,10 +17,10 @@ public class UserDaoImpl implements UserDao {
 
 	public User get(Long id) {
 		return (User) sessionFactory.getCurrentSession()
-			.createQuery("" +
-					"from User u " +
-					"where u.id = :id " +
-					"order by u.id")
+			.createQuery(
+					"FROM User u " +
+					"WHERE u.id = :id " +
+					"ORDER BY u.id")
 			.setLong("id", id).uniqueResult();
 	}
 
@@ -30,7 +30,7 @@ public class UserDaoImpl implements UserDao {
 
 	@SuppressWarnings("unchecked")
 	public List<User> findAll() {
-		return sessionFactory.getCurrentSession().createQuery("from User").list();
+		return sessionFactory.getCurrentSession().createQuery("FROM User").list();
 	}
 
 	public void save(User user) {
