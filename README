@@ -1,9 +1,8 @@
 This is a clean Spring MVC application skeleton with Hibernate persistence.
 
-1. Edit
-		src/main/webapp/WEB-INF/spring/persistence-config.xml
-		src/test/resources/test-persistance-config.xml
-to reflect your environment.
+1. Edit the following files to reflect your environment:
+	src/main/webapp/WEB-INF/spring/persistence-config.xml
+	src/test/resources/test-persistance-config.xml
 2. gradle jettyRun
 3. Open http://localhost:8080/spring-mvc-hibernate-skeleton/user
 
