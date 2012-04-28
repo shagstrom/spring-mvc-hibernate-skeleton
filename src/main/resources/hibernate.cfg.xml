@@ -5,15 +5,7 @@
 <hibernate-configuration>
 	<session-factory>
 
-	<mapping class="com.dreamchain.skeleton.model.User" />
-
-	<!--<event type="pre-update">-->
-		<!--<listener class="org.hibernate.validator.event.ValidatePreUpdateEventListener"/>-->
-	<!--</event>-->
-	<!---->
-	<!--<event type="pre-insert">-->
-		<!--<listener class="org.hibernate.validator.event.ValidatePreInsertEventListener"/>-->
-	<!--</event>-->
+		<mapping class="com.dreamchain.skeleton.model.User" />
 
 	</session-factory>
 </hibernate-configuration>

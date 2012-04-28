@@ -1,14 +1,16 @@
 version = '1.0'
 
-apply plugin: 'war'
 apply plugin: 'jetty'
 apply plugin: 'eclipse'
 
 sourceCompatibility = 1.6
 
+sourceSets {
+	selenium
+}
+
 repositories {
 	mavenCentral()
-	mavenRepo urls: [ "http://repository.jboss.com/maven2" ]
 }
 
 dependencies {
@@ -40,6 +42,15 @@ dependencies {
 	compile 'javax.servlet:jstl:1.2'
 
 	/* Test */
-	testCompile group: 'junit', name: 'junit', version: '4.7'
+	testCompile 'junit:junit:4.7'
 	
+	/* Selenium */
+	seleniumCompile 'org.seleniumhq.selenium:selenium-java:2.20.0'
+	seleniumRuntime 'org.seleniumhq.selenium:selenium-server:2.20.0'
+	
+}
+
+task selenium(type: Test) << {
+	testClassesDir = sourceSets.selenium.output.classesDir
+	classpath = sourceSets.selenium.runtimeClasspath
 }
