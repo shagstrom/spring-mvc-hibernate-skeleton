@@ -1,5 +1,6 @@
 package com.dreamchain.resources;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -36,9 +37,10 @@ public class ResourceTag extends TagSupport {
 	}
 	
 	public void setName(String name) {
-		Pattern ext = Pattern.compile("^(\\.*)*([^\\.])*$");
+		System.out.println(new File(".").getAbsolutePath());
+		Pattern ext = Pattern.compile("^(.*)\\.([^\\.]*)$");
 		Matcher m = ext.matcher(name);
-		if (m.find()) {
+		if (!m.find()) {
 			throw new IllegalArgumentException("Valid extensions are 'js' and 'css'.");
 		}
 		try {

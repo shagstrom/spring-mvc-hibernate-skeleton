@@ -13,10 +13,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@SuppressWarnings("serial")
 public class ResourcesServlet extends HttpServlet {
 	
-	private static final long serialVersionUID = -98896778039664612L;
-
 	private static Map<String, String> resourcesHashes = new HashMap<String, String>();
 	
 	private MimetypesFileTypeMap mimetypesFileTypeMap = new MimetypesFileTypeMap();

@@ -1,4 +1,4 @@
-:prototyp
+:prototype
 prototype.js
 
 :user

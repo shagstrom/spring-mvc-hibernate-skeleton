@@ -2,6 +2,7 @@ version = '1.0'
 
 apply plugin: 'jetty'
 apply plugin: 'eclipse'
+apply plugin: 'eclipse-wtp'
 
 sourceCompatibility = 1.6
 
