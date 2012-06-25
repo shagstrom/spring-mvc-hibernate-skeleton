@@ -43,15 +43,25 @@ dependencies {
 	compile 'javax.servlet:jstl:1.2'
 
 	/* Test */
-	testCompile 'junit:junit:4.7'
+	testCompile 'junit:junit:4.10'
 	
 	/* Selenium */
+	seleniumCompile 'junit:junit:4.10'
 	seleniumCompile 'org.seleniumhq.selenium:selenium-java:2.20.0'
-	seleniumRuntime 'org.seleniumhq.selenium:selenium-server:2.20.0'
 	
 }
 
-task selenium(type: Test) << {
+eclipse {
+	classpath {
+		plusConfigurations += configurations.seleniumCompile
+	}
+}
+
+task jettyDaemon(type: org.gradle.api.plugins.jetty.JettyRun) {
+	daemon = true
+}
+
+task selenium(type: Test, dependsOn: jettyDaemon) {
 	testClassesDir = sourceSets.selenium.output.classesDir
 	classpath = sourceSets.selenium.runtimeClasspath
 }

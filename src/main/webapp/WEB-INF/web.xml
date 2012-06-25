@@ -33,16 +33,6 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
-	<servlet>
-		<servlet-name>Resources</servlet-name>
-		<servlet-class>com.dreamchain.resources.ResourcesServlet</servlet-class>
-	</servlet>
- 
-	<servlet-mapping>
-		<servlet-name>Resources</servlet-name>
-		<url-pattern>/resources/*</url-pattern>
-	</servlet-mapping>
-
 	<filter>
 		<filter-name>etagFilter</filter-name>
 		<filter-class>org.springframework.web.filter.ShallowEtagHeaderFilter</filter-class>

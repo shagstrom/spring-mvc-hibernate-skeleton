@@ -9,10 +9,10 @@
 	<!-- Configures support for @Controllers -->
 	<mvc:annotation-driven />
 	
- 	<mvc:resources mapping="/scripts/**" location="/scripts/" />
+	<mvc:resources mapping="/scripts/**" location="/scripts/" />
 	<mvc:resources mapping="/styles/**" location="/styles/" />
 	<mvc:resources mapping="/images/**" location="/images/" />
-
+	
 	<!-- Resolves view names to protected .jsp resources within the /WEB-INF/views directory -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />

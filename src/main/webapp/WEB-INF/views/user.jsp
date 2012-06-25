@@ -3,7 +3,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib uri="/WEB-INF/tld/resources.tld" prefix="r" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -13,7 +12,6 @@
 		<script type="text/javascript" src="<c:url value='/scripts/lib/prototype.js' />"></script>
 		<script type="text/javascript" src="<c:url value='/scripts/lib/RowSelector.js' />"></script>
 		<script type="text/javascript" src="<c:url value='/scripts/user.js' />"></script>
-		<r:resource name="prototype.js" />
 	</head>
 	<body>
 		<!--[if lt IE 9]>
