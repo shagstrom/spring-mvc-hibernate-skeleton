@@ -5,3 +5,4 @@ target
 .gradle
 bin
 build
+target-eclipse
