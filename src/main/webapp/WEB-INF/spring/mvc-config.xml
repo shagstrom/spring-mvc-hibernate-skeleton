@@ -9,6 +9,8 @@
 	<!-- Configures support for @Controllers -->
 	<mvc:annotation-driven />
 	
+	<mvc:view-controller path="/" view-name="home" />
+	
 	<mvc:resources mapping="/scripts/**" location="/scripts/" />
 	<mvc:resources mapping="/styles/**" location="/styles/" />
 	<mvc:resources mapping="/images/**" location="/images/" />

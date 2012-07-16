@@ -43,6 +43,7 @@ td input[disabled] {
 
 td input[type="text"] {
 	width: 100%;
+	box-sizing: border-box;
 }
 
 form {
@@ -66,6 +67,7 @@ input[type="submit"] {
 	background: #ddd;
 	text-shadow: 1px 1px #f5f5f5;
 	padding: 0.25em 0.5em;
+	box-shadow: 1px 1px #eee;
 }
 
 input.disablable-hidden {

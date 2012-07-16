@@ -43,7 +43,7 @@
 				</div>
 
 				<div class="field vertical">
-					<input class="submit" type="submit" value="Create new user">
+					<input type="submit" value="Create new user">
 				</div>
 
 			</fieldset>
