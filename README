@@ -1,9 +1,9 @@
-This is a clean Spring MVC application skeleton with Hibernate persistence. I'm building with Gradle and I'm running functional tests with WebDriver.
+This is a clean Spring MVC application skeleton with Hibernate persistence. I'm building with Gradle and I'm using WebDriver to do functional testing.
 
 1. Edit the following files to reflect your environment:
 	src/main/webapp/WEB-INF/spring/persistence-config.xml
 	src/test/resources/test-persistance-config.xml
-2. Run the Selenium test (you will need to have Firefox installed). 
+2. Run the Selenium test (you will need to have Firefox installed):
 	gradle clean selenium
 
 Done.
