@@ -21,13 +21,8 @@ public class UserController {
 	@Autowired
 	UserService userService;
 
-	@ModelAttribute("userCommand")
-	public UserCommand populateUserCommand() {
-		return new UserCommand();
-	}
-	
 	@RequestMapping(method = RequestMethod.GET)
-	public void get(Model model) {
+	public void get(Model model, @ModelAttribute UserCommand userCommand) {
 		model.addAttribute("userGrid", userService.findAll());
 	}
 	

@@ -30,7 +30,10 @@ public class UserDaoImpl implements UserDao {
 
 	@SuppressWarnings("unchecked")
 	public List<User> findAll() {
-		return sessionFactory.getCurrentSession().createQuery("FROM User").list();
+		return sessionFactory.getCurrentSession().createQuery(
+				"FROM User " +
+				"ORDER BY id")
+			.list();
 	}
 
 	public void save(User user) {
