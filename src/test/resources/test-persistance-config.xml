@@ -8,8 +8,6 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 
-	<context:annotation-config />
-
 	<context:component-scan base-package="com.dreamchain.skeleton" />
 
 	<!-- DataSource: hsqldb file -->
@@ -23,15 +21,14 @@
 
 	<!-- Hibernate -->
 	<bean id="mySessionFactory"
-		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="myDataSource" />
-		<property name="configurationClass" value="org.hibernate.cfg.AnnotationConfiguration" />
 		<property name="configLocation" value="classpath:hibernate.cfg.xml" />
 		<property name="namingStrategy" ref="namingStrategy" />
 		
 		<property name="hibernateProperties">
 			<props>
-				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.show_sql">false</prop>
 				<prop key="hibernate.hbm2ddl.auto">update</prop>
 				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
 			</props>
@@ -41,7 +38,7 @@
 	<!-- Transaction management -->
 	<tx:annotation-driven />
 
-	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="mySessionFactory" />
 	</bean>
 	

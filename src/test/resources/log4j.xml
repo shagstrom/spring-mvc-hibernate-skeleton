@@ -17,21 +17,14 @@
 	</logger>
 	
 	<!-- 3rdparty Loggers -->
-	<logger name="org.springframework.core">
-		<level value="warn" />
-	</logger>	
-	
-	<logger name="org.springframework.beans">
+	<logger name="org.springframework">
 		<level value="warn" />
 	</logger>
 	
-	<logger name="org.springframework.context">
+	<logger name="org.hibernate">
 		<level value="warn" />
 	</logger>
 
-	<logger name="org.springframework.web">
-		<level value="warn" />
-	</logger>
 
 	<!-- Root Logger -->
 	<root>

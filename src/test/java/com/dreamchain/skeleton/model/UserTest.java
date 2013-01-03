@@ -1,7 +1,5 @@
 package com.dreamchain.skeleton.model;
 
-import static junit.framework.Assert.assertTrue;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,8 +9,10 @@ import javax.validation.Validator;
 
 import org.junit.Test;
 
+import static org.junit.Assert.*;
 
 public class UserTest {
+	
 	
 	@Test
 	public void assert_that_certain_fields_cant_be_null_or_blank() {

@@ -8,12 +8,10 @@ import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
 
-import junit.framework.Assert;
-
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.dreamchain.skeleton.model.User;
-import com.dreamchain.skeleton.web.UserGrid;
 
 public class UserGridTest {
 	

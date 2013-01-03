@@ -17,19 +17,15 @@
 	</logger>
 	
 	<!-- 3rdparty Loggers -->
-	<logger name="org.springframework.core">
+	<logger name="org.springframework">
 		<level value="warn" />
 	</logger>
 	
-	<logger name="org.springframework.beans">
-		<level value="warn" />
-	</logger>
-	
-	<logger name="org.springframework.context">
+	<logger name="org.hibernate">
 		<level value="warn" />
 	</logger>
 
-	<logger name="org.springframework.web">
+	<logger name="org.jboss">
 		<level value="warn" />
 	</logger>
 

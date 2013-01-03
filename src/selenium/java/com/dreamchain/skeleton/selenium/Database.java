@@ -6,6 +6,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public final class Database {
+	
+	private static final String DRIVER = "org.postgresql.Driver";
+	private static final String URL = "jdbc:postgresql://localhost:5432/skeleton";
+	private static final String USER = "skeleton";
+	private static final String PASSWORD = "password";
 
 	public static void clean() throws SQLException {
 		executeUpdate("DELETE FROM users;");
@@ -27,15 +32,12 @@ public final class Database {
 	}
 
 	private static Connection createConnection() throws SQLException {
-		String url = "jdbc:postgresql://localhost:5432/skeleton";
-		String user = "skeleton";
-		String password = "password";
 		try {
-			Class.forName("org.postgresql.Driver");
+			Class.forName(DRIVER);
 		} catch (ClassNotFoundException e) {
-			throw new RuntimeException("Could not find driver");
+			throw new RuntimeException("Could not find driver: " + DRIVER);
 		}
-		return DriverManager.getConnection(url, user, password);
+		return DriverManager.getConnection(URL, USER, PASSWORD);
 	}
 
 }
