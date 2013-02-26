@@ -45,7 +45,7 @@ dependencies {
 	/* Selenium */
 	seleniumCompile 'postgresql:postgresql:9.1-901-1.jdbc4'
 	seleniumCompile 'junit:junit:4.11'
-	seleniumCompile 'org.seleniumhq.selenium:selenium-java:2.28.0'
+	seleniumCompile 'org.seleniumhq.selenium:selenium-java:2.30.0'
 	
 }
 
