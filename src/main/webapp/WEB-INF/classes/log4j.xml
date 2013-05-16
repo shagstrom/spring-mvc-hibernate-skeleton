@@ -29,6 +29,10 @@
 		<level value="warn" />
 	</logger>
 
+	<logger name="net.jawr">
+		<level value="info" />
+	</logger>
+
 	<!-- Root Logger -->
 	<root>
 		<priority value="debug" />

@@ -37,7 +37,9 @@ dependencies {
 	providedCompile 'javax.servlet:servlet-api:2.5'
 	providedCompile 'javax.servlet.jsp:jsp-api:2.1'
 	compile 'javax.servlet:jstl:1.2'
-
+	
+	runtime 'net.jawr:jawr:3.3.3'
+	
 	/* Test */
 	testCompile 'junit:junit:4.11'
 	testCompile 'org.springframework:spring-test:3.2.0.RELEASE'
@@ -45,7 +47,7 @@ dependencies {
 	/* Selenium */
 	seleniumCompile 'postgresql:postgresql:9.1-901-1.jdbc4'
 	seleniumCompile 'junit:junit:4.11'
-	seleniumCompile 'org.seleniumhq.selenium:selenium-java:2.30.0'
+	seleniumCompile 'org.seleniumhq.selenium:selenium-java:2.32.0'
 	
 }
 
