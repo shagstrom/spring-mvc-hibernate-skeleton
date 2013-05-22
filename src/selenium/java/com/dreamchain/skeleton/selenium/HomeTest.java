@@ -62,6 +62,7 @@ public class HomeTest {
 	
 	private void addUser(String name) {
 		driver.findElement(By.name("name")).sendKeys(name);
+		driver.findElement(By.name("password")).sendKeys("password");
 		driver.findElement(By.name("email")).sendKeys(name + "@domain.com");
 		driver.findElement(By.name("address")).sendKeys("31 Some Street\nSome Town");
 		driver.findElement(By.id("userCommand")).findElement(By.xpath("//input[@type='submit']")).click();

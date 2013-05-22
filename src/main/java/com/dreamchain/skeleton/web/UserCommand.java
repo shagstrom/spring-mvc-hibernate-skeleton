@@ -13,6 +13,7 @@ public class UserCommand extends User {
 	public UserCommand(User user) {
 		setId(user.getId());
 		setName(user.getName());
+		setPassword(user.getPassword());
 		setEmail(user.getEmail());
 		setAddress(user.getAddress());
 	}
@@ -21,6 +22,7 @@ public class UserCommand extends User {
 		User user = new User();
 		user.setId(getId());
 		user.setName(getName());
+		user.setPassword(getPassword());
 		user.setEmail(getEmail());
 		user.setAddress(getAddress());
 		return user;

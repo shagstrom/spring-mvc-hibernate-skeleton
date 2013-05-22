@@ -24,6 +24,9 @@ public class User implements Serializable {
 	@NotEmpty
 	private String name;
 
+	@NotEmpty
+	private String password;
+	
 	@Email
 	@NotEmpty
 	private String email;
@@ -43,6 +46,12 @@ public class User implements Serializable {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public String getEmail() {
 		return email;

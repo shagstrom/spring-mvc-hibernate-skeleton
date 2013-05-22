@@ -29,6 +29,12 @@
 						<form:input path="name" />
 					</div>
 	
+					<div class="field">
+						<form:label for="password" path="password">Password:</form:label>
+						<form:errors path="password" cssClass="errors" />
+						<form:input path="password" />
+					</div>
+
 					<div class="field vertical">
 						<form:label for="email" path="email">Email:</form:label>
 						<form:errors path="email" cssClass="errors" />
@@ -50,7 +56,7 @@
 		</form:form>
 		<form:form action="" method="put" modelAttribute="userGrid">
 			<table>
-				<thead><tr><th><input type="checkbox" class="toggleAll" /></th><th>Name</th><th>Email</th><th>Address</th></tr></thead>
+				<thead><tr><th><input type="checkbox" class="toggleAll" /></th><th>Name</th><th>Password</th><th>Email</th><th>Address</th></tr></thead>
 				<tbody>
 					<c:forEach var="userEntry" items="${userGrid.userMap}" varStatus="row">
 						<tr>
@@ -66,6 +72,10 @@
 							<td>
 								<form:errors path="userMap[${userEntry.key}].name" cssClass="errors" />
 								<form:input disabled="${!userEntry.value.selected}" path="userMap[${userEntry.key}].name" />
+							</td>
+							<td>
+								<form:errors path="userMap[${userEntry.key}].password" cssClass="errors" />
+								<form:input disabled="${!userEntry.value.selected}" path="userMap[${userEntry.key}].password" />
 							</td>
 							<td>
 								<form:errors path="userMap[${userEntry.key}].email" cssClass="errors" />

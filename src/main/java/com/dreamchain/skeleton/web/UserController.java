@@ -3,6 +3,8 @@ package com.dreamchain.skeleton.web;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.crypto.password.StandardPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -32,7 +34,10 @@ public class UserController {
 			model.addAttribute("userGrid", userService.findAll());
 			return URL;
 		}
+		PasswordEncoder passwordEncoder = new StandardPasswordEncoder();
+		userCommand.setPassword(passwordEncoder.encode(userCommand.getPassword()));
 		userService.save(userCommand);
+		
 		return "redirect:" + URL;
 	}
 	

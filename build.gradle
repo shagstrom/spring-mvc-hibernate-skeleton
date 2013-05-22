@@ -28,8 +28,11 @@ dependencies {
 	}
 	compile 'org.springframework:spring-orm:3.2.0.RELEASE'
 	compile 'org.springframework:spring-webmvc:3.2.0.RELEASE'
-
-	/* Logging */
+	compile 'org.springframework.security:spring-security-core:3.1.4.RELEASE'
+	compile 'org.springframework.security:spring-security-web:3.1.4.RELEASE'
+	compile 'org.springframework.security:spring-security-config:3.1.4.RELEASE'
+	
+  	/* Logging */
 	compile 'log4j:log4j:1.2.17'
 	compile 'org.slf4j:slf4j-log4j12:1.6.1'
 
