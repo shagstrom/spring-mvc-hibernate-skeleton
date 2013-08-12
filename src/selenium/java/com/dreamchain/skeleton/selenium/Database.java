@@ -7,11 +7,9 @@ import java.sql.Statement;
 
 public final class Database {
 	
-	private static final String DRIVER = "org.postgresql.Driver";
-	private static final String URL = "jdbc:postgresql://localhost:5432/skeleton";
-	private static final String USER = "skeleton";
-	private static final String PASSWORD = "password";
-
+	private static final String DRIVER = "org.h2.Driver";
+	private static final String URL = "jdbc:h2:h2db/database";
+	
 	public static void clean() throws SQLException {
 		executeUpdate("DELETE FROM users;");
 	}
@@ -37,7 +35,11 @@ public final class Database {
 		} catch (ClassNotFoundException e) {
 			throw new RuntimeException("Could not find driver: " + DRIVER);
 		}
-		return DriverManager.getConnection(URL, USER, PASSWORD);
+		return DriverManager.getConnection(URL);
+	}
+	
+	public static void main(String[] args) throws SQLException {
+		Connection connection = createConnection();
 	}
 
 }
