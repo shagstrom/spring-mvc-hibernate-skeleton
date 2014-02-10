@@ -22,11 +22,13 @@ public class UserGridTest {
 
 		users.add(new User());
 		users.get(0).setName("name1");
+		users.get(0).setPassword("XXX");
 		users.get(0).setEmail("name1@domain.net");
 		users.get(0).setAddress("address1");
 
 		users.add(new User());
 		users.get(1).setName("name2");
+		users.get(1).setPassword("XXX");
 		users.get(1).setEmail("name2@domain.net");
 		users.get(1).setAddress("address2");
 
@@ -45,6 +47,7 @@ public class UserGridTest {
 
 		users.add(new User());
 		users.get(0).setName("name1");
+		users.get(0).setPassword("XXX");
 		users.get(0).setEmail("Invalid Email!!!!");
 		users.get(0).setAddress("address1");
 

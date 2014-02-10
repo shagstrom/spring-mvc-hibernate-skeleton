@@ -38,8 +38,4 @@ public final class Database {
 		return DriverManager.getConnection(URL);
 	}
 	
-	public static void main(String[] args) throws SQLException {
-		Connection connection = createConnection();
-	}
-
 }

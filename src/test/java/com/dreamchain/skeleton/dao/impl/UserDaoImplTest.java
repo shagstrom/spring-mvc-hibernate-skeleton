@@ -19,6 +19,7 @@ public class UserDaoImplTest extends DaoTest {
 		User user = new User();
 		user.setName("Name1");
 		user.setEmail("simon@domain.com");
+		user.setPassword("XXX");
 		user.setAddress("31 My Street\nTown, TN 38103");
 		userDaoImpl.save(user);
 		List<User> users = userDaoImpl.findAll();

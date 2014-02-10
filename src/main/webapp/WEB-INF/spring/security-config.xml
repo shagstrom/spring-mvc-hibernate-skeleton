@@ -8,7 +8,7 @@
 
 	<http auto-config="true">
  		<intercept-url pattern="/secret" access="ROLE_ADMIN" />
- 		<form-login login-page="/login" default-target-url="/"
+ 		<form-login login-page="/login" default-target-url="/" 
 			authentication-failure-url="/login?failed" />
 		<logout logout-success-url="/" />
 	</http>

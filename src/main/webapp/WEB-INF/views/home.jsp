@@ -1,13 +1,10 @@
-<%@page contentType="text/html;charset=UTF-8"%>
-<%@page pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://jawr.net/tags" prefix="jwr" %>
-<!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"
+%><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title>Spring MVC skeleton with Gradle build, Hibernate persistance and Selenium functional testing</title>
-		<jwr:style src="/bundles/all.css" />
+		<link rel="stylesheet" href="<c:url value='/styles/default.css'/>">
 	</head>
 	<body>
 		<!--[if lt IE 9]>

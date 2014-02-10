@@ -1,17 +1,12 @@
-<%@page contentType="text/html;charset=UTF-8"%>
-<%@page pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://jawr.net/tags" prefix="jwr" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %><%@
+	taglib prefix="form" uri="http://www.springframework.org/tags/form" %><%@
+	taglib prefix="spring" uri="http://www.springframework.org/tags"
+%><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title>Users</title>
-		<jwr:style src="/bundles/all.css" />
-		<jwr:script src="/bundles/lib.js"/>
-		<jwr:script src="/scripts/user.js"/>
+		<link rel="stylesheet" href="<c:url value='/styles/default.css'/>">
 	</head>
 	<body>
 		<!--[if lt IE 9]>
@@ -93,5 +88,8 @@
 				<input type="submit" value="Update all enabled users">
 			</p>
 		</form:form>
+		<script src="<c:url value='/scripts/lib/prototype.js'/>"></script>
+		<script src="<c:url value='/scripts/lib/RowSelector.js'/>"></script>
+		<script src="<c:url value='/scripts/user.js'/>"></script>
 	</body>
 </html>

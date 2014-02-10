@@ -26,7 +26,7 @@ public class UserTest {
 	@Test
 	public void assert_that_email_has_to_be_an_email() {
 		User user = new User();
-		user.setEmail("invalid@email@");
+		user.setEmail("invalid@email@yes");
 		Map<String, ConstraintViolation<User>> violationsMap = validate(user);
 		assertTrue(violationsMap.get("email").getMessageTemplate().contains("Email"));
 	}

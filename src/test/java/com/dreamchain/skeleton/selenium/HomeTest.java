@@ -33,14 +33,14 @@ public class HomeTest {
 	
 	@Test
 	public void addingOneUser() {
-		driver.get("http://localhost:8080/spring-mvc-hibernate-skeleton/user");
+		driver.get("http://localhost:8080/skeleton/user");
 		addUser("user1");
 		assertEquals(1, driver.findElements(By.xpath("//table//tbody//tr")).size());
 	}
 
 	@Test
 	public void addingTwoUsers() {
-		driver.get("http://localhost:8080/spring-mvc-hibernate-skeleton/user");
+		driver.get("http://localhost:8080/skeleton/user");
 		addUser("user1");
 		addUser("user2");
 		assertEquals(2, driver.findElements(By.xpath("//table//tbody//tr")).size());
@@ -48,7 +48,7 @@ public class HomeTest {
 	
 	@Test
 	public void updatingTwoUsers() {
-		driver.get("http://localhost:8080/spring-mvc-hibernate-skeleton/user");
+		driver.get("http://localhost:8080/skeleton/user");
 		addUser("user1");
 		addUser("user2");
 		driver.findElement(By.xpath("//tbody//tr[1]//input[@type='checkbox']")).click();
