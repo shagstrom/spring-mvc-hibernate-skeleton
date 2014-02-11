@@ -7,3 +7,4 @@ bin
 build
 target-eclipse
 h2db
+.springBeans

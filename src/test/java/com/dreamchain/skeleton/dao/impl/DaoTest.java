@@ -9,7 +9,7 @@ import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.test.context.transaction.TransactionalTestExecutionListener;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:test-persistance-config.xml")
+@ContextConfiguration("classpath:testContext.xml")
 @TestExecutionListeners({TransactionalTestExecutionListener.class})
 @TransactionConfiguration(transactionManager = "transactionManager")
 public abstract class DaoTest extends AbstractJUnit4SpringContextTests {

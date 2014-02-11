@@ -9,9 +9,6 @@
 		<link rel="stylesheet" href="<c:url value='/styles/default.css'/>">
 	</head>
 	<body>
-		<!--[if lt IE 9]>
-			<div class="legacy-browser">You are using a Legacy Browser - it is not supported. Please upgrade to <a href="http://windows.microsoft.com/en-US/internet-explorer/downloads/ie-9/worldwide-languages">IE9</a>, Firefox, Safari, Chrome or Opera.</div>
-		<![endif]-->
 		<h1>Users</h1>
 		<form:form action="" method="post" modelAttribute="userCommand">
 			<fieldset class="fieldcontainer">
